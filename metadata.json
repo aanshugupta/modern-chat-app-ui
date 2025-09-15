@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Real-Time Chat Application",
+  "description": "A feature-rich, real-time chat application built with React and Tailwind CSS, showcasing a modern UI with login, profile management, chat windows, and an admin dashboard.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

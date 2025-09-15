@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='indigo' d='M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChitChat - Real-Time Chat App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            backgroundImage: {
+              'gradient-sent': 'linear-gradient(to right, #4f46e5, #818cf8)',
+              'gradient-button': 'linear-gradient(to right, #6366f1, #a78bfa)',
+            },
+            animation: {
+                'fade-in': 'fadeIn 0.4s ease-out forwards',
+                'heart-pop': 'heartPop 0.8s ease-out forwards',
+            },
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: 0, transform: 'translateY(10px) scale(0.98)' },
+                    '100%': { opacity: 1, transform: 'translateY(0) scale(1)' },
+                },
+                heartPop: {
+                    '0%': { opacity: 0, transform: 'scale(0.5)' },
+                    '30%': { opacity: 1, transform: 'scale(1.2)' },
+                    '100%': { opacity: 0, transform: 'scale(1.5)' },
+                },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://esm.run/@google/genai"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-100 dark:bg-slate-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
